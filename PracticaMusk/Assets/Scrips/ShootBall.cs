@@ -15,7 +15,7 @@ public class ShootBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Como Jugar: Para mover el palo se utilizan las flechitas y el raton con el click izquierdo para disparar, Suerte!!");
     }
 void Update(){
   
@@ -26,14 +26,13 @@ void Update(){
         {
             ball.isKinematic=false;
             Vector3 direction = (ball.transform.position - stickController.StickGolf.transform.position).normalized;
-            ball.GetComponent<Rigidbody>().AddForce(direction * Distance * 200);
+            ball.GetComponent<Rigidbody>().AddForce(direction * Distance * 300);
             PuntosGolpeo++;
             print("Puntos de Golpeo: "+PuntosGolpeo);
             TimeBall=Time.time;
            isShoot=true;
         }
         if(Time.time-TimeBall>3 && isShoot==true){
-               print("Time is over"+TimeBall);
                stickController.StickGolf.transform.position=new Vector3(0,0,0);
               ball.isKinematic=true;
                TimeBall=0; 

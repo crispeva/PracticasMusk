@@ -5,31 +5,34 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject win;
-    public GameObject Obtecle;
-     public GameObject Obtecle2;
+    private Win win;
       public float rango = 5.0f;
       float velocidad = 1f;
 
-    void Start()
+    void Awake()
     {
+        win=FindAnyObjectByType<Win>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        Move(Obtecle);
-        Move(Obtecle2);
+        Move();
+        Move();
        
     }
-
-    void Move(GameObject Obtecle)
+    void OnCollisionEnter(Collision collision)
     {
-        Obtecle.transform.Translate(Vector3.right * velocidad * Time.deltaTime);
+        if(collision.gameObject.tag=="Ball"){
+            win.MoveBallToSpawn();
+        }
+    }
+    void Move()
+    {
+        transform.Translate(Vector3.right * velocidad * Time.deltaTime);
         
-        if (Obtecle.transform.position.x > rango)
+        if (transform.position.x > rango)
         {
-            Obtecle.transform.position = new Vector3(-rango, Obtecle.transform.position.y, Obtecle.transform.position.z);
+            transform.position = new Vector3(-rango, transform.position.y, transform.position.z);
         }
     }
 

@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 489831069}
   - component: {fileID: 489831068}
   - component: {fileID: 489831071}
+  - component: {fileID: 489831072}
   m_Layer: 0
   m_Name: Obstacle1
   m_TagString: Obstacle
@@ -486,6 +487,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &489831072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489831066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031aed378a51ff04dba2c75b9b18c367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rango: 5
 --- !u!1001 &551376304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,7 +681,6 @@ GameObject:
   - component: {fileID: 862095704}
   - component: {fileID: 862095705}
   - component: {fileID: 862095706}
-  - component: {fileID: 862095707}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -718,22 +731,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StickGolf: {fileID: 1922706876}
---- !u!114 &862095707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862095703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031aed378a51ff04dba2c75b9b18c367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  win: {fileID: 389650978}
-  Obtecle: {fileID: 489831066}
-  Obtecle2: {fileID: 1249657045}
-  rango: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1076,7 @@ GameObject:
   - component: {fileID: 1249657048}
   - component: {fileID: 1249657047}
   - component: {fileID: 1249657050}
+  - component: {fileID: 1249657051}
   m_Layer: 0
   m_Name: Obstacle2
   m_TagString: Obstacle
@@ -1199,6 +1197,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1249657051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249657045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031aed378a51ff04dba2c75b9b18c367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rango: 5
 --- !u!1 &1379395060
 GameObject:
   m_ObjectHideFlags: 0
